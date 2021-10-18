@@ -2,6 +2,7 @@
         <head>
         <title>cad2021 homework site</title>
         <meta charset="utf-8">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -92,6 +93,7 @@ img.add_border {
 </head>
 <body>
 <div class='container-fluid'><nav>
+        
     <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -137,4 +139,85 @@ img.add_border {
           </div>
           
         </header>
-    </nav><section><h1>Site Map</h1><div id="tipue_search_content"></div><ul><li><a href='About.html'>About</a><ul><li><a href='更新內容.html'>更新內容</a></li></ul><li><a href='Task.html'>Task</a><ul><li><a href='HwPage.html'>HwPage</a><li><a href='解法(含Python).html'>解法(含Python)</a><li><a href='心得.html'>心得</a></li></ul><li><a href='HW1.html'>HW1</a><ul><li><a href='CAD1 繪圖.html'>CAD1 繪圖</a><ul><li><a href='CAD1 安裝配置.html'>CAD1 安裝配置</a><li><a href='CAD1 操作流程.html'>CAD1 操作流程</a></li></ul><li><a href='CAD2 繪圖.html'>CAD2 繪圖</a><ul><li><a href='CAD2 安裝配置.html'>CAD2 安裝配置</a><li><a href='CAD2 操作流程.html'>CAD2 操作流程</a></li></ul><li><a href='運動場景.html'>運動場景</a></li></ul><li><a href='HW1-1.html'>HW1-1</a><li><a href='HW2.html'>HW2</a><li><a href='HW3.html'>HW3</a><li><a href='Final Project.html'>Final Project</a></li></ul></section></div></body></html>
+    <div id="tipue_search_content">HwPage << <a href='HwPage.html'>Previous</a> <a href='心得.html'>Next</a> >> 心得<br /><h1>解法(含Python)</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#打開學員列表清單，並且轉換成列表
+with open("cad2021_2b_w2_list.txt","r",encoding="UTF-8") as page:
+	page.readline()
+	lines = page.read().splitlines()
+
+Web = []
+
+#將列表內的學號和Github帳號轉導入網頁源碼裡面
+for line in lines:
+    number, name = line.split("\t")
+    link2 = f"https://{name}.github.io/cad2021_hw/content/index.html"
+    link = f"https://github.com/{name}/cad2021_hw"
+    st = f'&lt;/strong&gt;&lt;br/&gt;&lt;strong&gt;{number}   &lt;a href="{link2}"&gt;{number}&lt;/a&gt;  &lt;a href="{link}"&gt;{number}&lt;/a&gt;&lt;/strong&gt;&lt;br/&gt;&lt;strong&gt;&lt;br/&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;'
+    Web.append(st)
+
+#輸出網頁源碼
+for url in Web:
+	print (url)</pre>
+<p><span style="color: #ff0000;">以上為程式碼，備註以上自行觀看</span></p>
+<p>我先將網頁源碼從content.htm裡面提出，我先在網頁裡面做出範本(下圖)<img alt="" height="275" src="./../images/第一步.png" width="562"/></p>
+<p></p>
+<p>content.htm在倉儲資料夾裡面的config裡面，將範本網頁源碼提出來後，放到程式碼裡面，再經由程式碼輸出(下圖)</p>
+<p><img alt="" height="554" src="./../images/第三步.png" width="335"/></p>
+<p></p>
+<p>最後放到content.htm裡面後，要注意不要放錯行(下圖)</p>
+<p><img alt="" height="321" src="./../images/第四步.png" width="315"/></p>
+<p></p>
+<p>最後刷新動態頁面(下圖)</p>
+<p><img alt="" height="341" src="./../images/第二步.png" width="695"/></p>
+<p>痾...好吧，我不清楚為甚麼會有空格產生，這個以後有空我來研究看看</p>
+<br />HwPage << <a href='HwPage.html'>Previous</a> <a href='心得.html'>Next</a> >> 心得</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
